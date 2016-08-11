@@ -1,0 +1,26 @@
+E:\Systems\RoadWarriors\RoadWarriors.DataLayer\bin\Debug\RoadWarriors.DataLayer.dll
+E:\Systems\RoadWarriors\RoadWarriors.DataLayer\bin\Debug\RoadWarriors.DataLayer.pdb
+E:\Systems\RoadWarriors\RoadWarriors.DataLayer\bin\Debug\RoadWarriors.DataLayer.xml
+E:\Systems\RoadWarriors\RoadWarriors.DataLayer\obj\Debug\RoadWarriors.DataLayer.Resources.resources
+E:\Systems\RoadWarriors\RoadWarriors.DataLayer\obj\Debug\RoadWarriors.DataAccessLayer.vbproj.GenerateResource.Cache
+E:\Systems\RoadWarriors\RoadWarriors.DataLayer\obj\Debug\RoadWarriors.DataLayer.dll
+E:\Systems\RoadWarriors\RoadWarriors.DataLayer\obj\Debug\RoadWarriors.DataLayer.xml
+E:\Systems\RoadWarriors\RoadWarriors.DataLayer\obj\Debug\RoadWarriors.DataLayer.pdb
+C:\Users\samkelo\Documents\Visual Studio 2015\Projects\RoadWarriors_VB\RoadWarriors.DataLayer\bin\Debug\RoadWarriors.DataLayer.dll
+C:\Users\samkelo\Documents\Visual Studio 2015\Projects\RoadWarriors_VB\RoadWarriors.DataLayer\bin\Debug\RoadWarriors.DataLayer.pdb
+C:\Users\samkelo\Documents\Visual Studio 2015\Projects\RoadWarriors_VB\RoadWarriors.DataLayer\bin\Debug\RoadWarriors.DataLayer.xml
+C:\Users\samkelo\Documents\Visual Studio 2015\Projects\RoadWarriors_VB\RoadWarriors.DataLayer\obj\Debug\RoadWarriors.DataAccessLayer.vbprojResolveAssemblyReference.cache
+C:\Users\samkelo\Documents\Visual Studio 2015\Projects\RoadWarriors_VB\RoadWarriors.DataLayer\obj\Debug\RoadWarriors.DataLayer.Resources.resources
+C:\Users\samkelo\Documents\Visual Studio 2015\Projects\RoadWarriors_VB\RoadWarriors.DataLayer\obj\Debug\RoadWarriors.DataAccessLayer.vbproj.GenerateResource.Cache
+C:\Users\samkelo\Documents\Visual Studio 2015\Projects\RoadWarriors_VB\RoadWarriors.DataLayer\obj\Debug\RoadWarriors.DataLayer.dll
+C:\Users\samkelo\Documents\Visual Studio 2015\Projects\RoadWarriors_VB\RoadWarriors.DataLayer\obj\Debug\RoadWarriors.DataLayer.xml
+C:\Users\samkelo\Documents\Visual Studio 2015\Projects\RoadWarriors_VB\RoadWarriors.DataLayer\obj\Debug\RoadWarriors.DataLayer.pdb
+C:\Users\samkelo\Documents\visual studio 2015\Projects\RoadWarriors_VB-master\RoadWarriors.DataLayer\bin\Debug\RoadWarriors.DataLayer.dll
+C:\Users\samkelo\Documents\visual studio 2015\Projects\RoadWarriors_VB-master\RoadWarriors.DataLayer\bin\Debug\RoadWarriors.DataLayer.pdb
+C:\Users\samkelo\Documents\visual studio 2015\Projects\RoadWarriors_VB-master\RoadWarriors.DataLayer\bin\Debug\RoadWarriors.DataLayer.xml
+C:\Users\samkelo\Documents\visual studio 2015\Projects\RoadWarriors_VB-master\RoadWarriors.DataLayer\obj\Debug\RoadWarriors.DataAccessLayer.vbprojResolveAssemblyReference.cache
+C:\Users\samkelo\Documents\visual studio 2015\Projects\RoadWarriors_VB-master\RoadWarriors.DataLayer\obj\Debug\RoadWarriors.DataLayer.Resources.resources
+C:\Users\samkelo\Documents\visual studio 2015\Projects\RoadWarriors_VB-master\RoadWarriors.DataLayer\obj\Debug\RoadWarriors.DataAccessLayer.vbproj.GenerateResource.Cache
+C:\Users\samkelo\Documents\visual studio 2015\Projects\RoadWarriors_VB-master\RoadWarriors.DataLayer\obj\Debug\RoadWarriors.DataLayer.dll
+C:\Users\samkelo\Documents\visual studio 2015\Projects\RoadWarriors_VB-master\RoadWarriors.DataLayer\obj\Debug\RoadWarriors.DataLayer.xml
+C:\Users\samkelo\Documents\visual studio 2015\Projects\RoadWarriors_VB-master\RoadWarriors.DataLayer\obj\Debug\RoadWarriors.DataLayer.pdb

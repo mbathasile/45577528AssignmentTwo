@@ -1,0 +1,27 @@
+E:\Systems\RoadWarriors\RoadWarriors.BusinessLogic\bin\Debug\RoadWarriors.BusinessLogic.dll
+E:\Systems\RoadWarriors\RoadWarriors.BusinessLogic\bin\Debug\RoadWarriors.BusinessLogic.pdb
+E:\Systems\RoadWarriors\RoadWarriors.BusinessLogic\bin\Debug\RoadWarriors.BusinessLogic.xml
+E:\Systems\RoadWarriors\RoadWarriors.BusinessLogic\obj\Debug\RoadWarriors.BusinessLogicLayer.vbprojResolveAssemblyReference.cache
+E:\Systems\RoadWarriors\RoadWarriors.BusinessLogic\obj\Debug\RoadWarriors.BusinessLogic.Resources.resources
+E:\Systems\RoadWarriors\RoadWarriors.BusinessLogic\obj\Debug\RoadWarriors.BusinessLogicLayer.vbproj.GenerateResource.Cache
+E:\Systems\RoadWarriors\RoadWarriors.BusinessLogic\obj\Debug\RoadWarriors.BusinessLogic.dll
+E:\Systems\RoadWarriors\RoadWarriors.BusinessLogic\obj\Debug\RoadWarriors.BusinessLogic.xml
+E:\Systems\RoadWarriors\RoadWarriors.BusinessLogic\obj\Debug\RoadWarriors.BusinessLogic.pdb
+C:\Users\samkelo\Documents\Visual Studio 2015\Projects\RoadWarriors_VB\RoadWarriors.BusinessLogic\bin\Debug\RoadWarriors.BusinessLogic.dll
+C:\Users\samkelo\Documents\Visual Studio 2015\Projects\RoadWarriors_VB\RoadWarriors.BusinessLogic\bin\Debug\RoadWarriors.BusinessLogic.pdb
+C:\Users\samkelo\Documents\Visual Studio 2015\Projects\RoadWarriors_VB\RoadWarriors.BusinessLogic\bin\Debug\RoadWarriors.BusinessLogic.xml
+C:\Users\samkelo\Documents\Visual Studio 2015\Projects\RoadWarriors_VB\RoadWarriors.BusinessLogic\obj\Debug\RoadWarriors.BusinessLogicLayer.vbprojResolveAssemblyReference.cache
+C:\Users\samkelo\Documents\Visual Studio 2015\Projects\RoadWarriors_VB\RoadWarriors.BusinessLogic\obj\Debug\RoadWarriors.BusinessLogic.Resources.resources
+C:\Users\samkelo\Documents\Visual Studio 2015\Projects\RoadWarriors_VB\RoadWarriors.BusinessLogic\obj\Debug\RoadWarriors.BusinessLogicLayer.vbproj.GenerateResource.Cache
+C:\Users\samkelo\Documents\Visual Studio 2015\Projects\RoadWarriors_VB\RoadWarriors.BusinessLogic\obj\Debug\RoadWarriors.BusinessLogic.dll
+C:\Users\samkelo\Documents\Visual Studio 2015\Projects\RoadWarriors_VB\RoadWarriors.BusinessLogic\obj\Debug\RoadWarriors.BusinessLogic.xml
+C:\Users\samkelo\Documents\Visual Studio 2015\Projects\RoadWarriors_VB\RoadWarriors.BusinessLogic\obj\Debug\RoadWarriors.BusinessLogic.pdb
+C:\Users\samkelo\Documents\visual studio 2015\Projects\RoadWarriors_VB-master\RoadWarriors.BusinessLogic\bin\Debug\RoadWarriors.BusinessLogic.dll
+C:\Users\samkelo\Documents\visual studio 2015\Projects\RoadWarriors_VB-master\RoadWarriors.BusinessLogic\bin\Debug\RoadWarriors.BusinessLogic.pdb
+C:\Users\samkelo\Documents\visual studio 2015\Projects\RoadWarriors_VB-master\RoadWarriors.BusinessLogic\bin\Debug\RoadWarriors.BusinessLogic.xml
+C:\Users\samkelo\Documents\visual studio 2015\Projects\RoadWarriors_VB-master\RoadWarriors.BusinessLogic\obj\Debug\RoadWarriors.BusinessLogicLayer.vbprojResolveAssemblyReference.cache
+C:\Users\samkelo\Documents\visual studio 2015\Projects\RoadWarriors_VB-master\RoadWarriors.BusinessLogic\obj\Debug\RoadWarriors.BusinessLogic.Resources.resources
+C:\Users\samkelo\Documents\visual studio 2015\Projects\RoadWarriors_VB-master\RoadWarriors.BusinessLogic\obj\Debug\RoadWarriors.BusinessLogicLayer.vbproj.GenerateResource.Cache
+C:\Users\samkelo\Documents\visual studio 2015\Projects\RoadWarriors_VB-master\RoadWarriors.BusinessLogic\obj\Debug\RoadWarriors.BusinessLogic.dll
+C:\Users\samkelo\Documents\visual studio 2015\Projects\RoadWarriors_VB-master\RoadWarriors.BusinessLogic\obj\Debug\RoadWarriors.BusinessLogic.xml
+C:\Users\samkelo\Documents\visual studio 2015\Projects\RoadWarriors_VB-master\RoadWarriors.BusinessLogic\obj\Debug\RoadWarriors.BusinessLogic.pdb
