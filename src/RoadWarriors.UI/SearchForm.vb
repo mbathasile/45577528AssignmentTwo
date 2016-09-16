@@ -1,6 +1,5 @@
 ﻿Imports RoadWarriors.BusinessLogic
 Imports RoadWarriors.BusinessLogic.Logic
-Imports RoadWarriors.DataLayer
 Imports RoadWarriors.DataLayer.Repository
 
 Public Class SearchForm
@@ -27,7 +26,5 @@ Public Class SearchForm
 
     Private Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click
         Me.Close()
-        Dim manageAthletesFrm = New ManageAthletes()
-        manageAthletesFrm.Show()
     End Sub
 End Class

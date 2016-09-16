@@ -4,13 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7F656F53-F80F-4E6F-B4D0-3E649ED90C04}</ProjectGuid>
+    <ProjectGuid>{4C04AD89-3467-4571-A780-BD8F8BD386A7}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>RoadWarriors.BusinessLogic</RootNamespace>
-    <AssemblyName>RoadWarriors.BusinessLogic</AssemblyName>
+    <RootNamespace>RoadWarriors.Core</RootNamespace>
+    <AssemblyName>RoadWarriors.Core</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -18,7 +18,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>RoadWarriors.BusinessLogic.xml</DocumentationFile>
+    <DocumentationFile>RoadWarriors.Core.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -27,7 +27,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>RoadWarriors.BusinessLogic.xml</DocumentationFile>
+    <DocumentationFile>RoadWarriors.Core.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -63,7 +63,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Logic\ClubMembershipNumberGenerator.vb" />
+    <Compile Include="Domain\Athlete.vb" />
+    <Compile Include="Domain\AthleteEvent.vb" />
+    <Compile Include="Domain\RaceResults.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -98,12 +100,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\RoadWarriors.DataLayer\RoadWarriors.DataAccessLayer.vbproj">
-      <Project>{becd6717-eb95-4cdc-aec2-b2d14afc5d46}</Project>
-      <Name>RoadWarriors.DataAccessLayer</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

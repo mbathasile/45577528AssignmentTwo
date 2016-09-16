@@ -106,7 +106,7 @@ Partial Class AddAthleteFrm
         Me.GroupBox1.Controls.Add(Me.FemaleRadioBtn)
         Me.GroupBox1.Controls.Add(Me.MaleRadioBtn)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(30, 185)
+        Me.GroupBox1.Location = New System.Drawing.Point(458, 83)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(203, 58)
         Me.GroupBox1.TabIndex = 8
@@ -179,7 +179,7 @@ Partial Class AddAthleteFrm
         '
         Me.FullNameTextBox.Location = New System.Drawing.Point(180, 83)
         Me.FullNameTextBox.Name = "FullNameTextBox"
-        Me.FullNameTextBox.Size = New System.Drawing.Size(451, 20)
+        Me.FullNameTextBox.Size = New System.Drawing.Size(245, 20)
         Me.FullNameTextBox.TabIndex = 13
         '
         'FeeTextBox
@@ -250,6 +250,7 @@ Partial Class AddAthleteFrm
         '
         'BackButton
         '
+        Me.BackButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.BackButton.Location = New System.Drawing.Point(27, 84)
         Me.BackButton.Name = "BackButton"
         Me.BackButton.Size = New System.Drawing.Size(154, 38)
@@ -265,7 +266,8 @@ Partial Class AddAthleteFrm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(661, 466)
+        Me.CancelButton = Me.BackButton
+        Me.ClientSize = New System.Drawing.Size(688, 503)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.MembershipNumberLabel)
         Me.Controls.Add(Me.DJoinedDateTimePicker)

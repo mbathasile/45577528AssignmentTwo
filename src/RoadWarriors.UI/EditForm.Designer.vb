@@ -43,10 +43,10 @@ Partial Class EditForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BackButton = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.AddNewRaceTimesBtn = New System.Windows.Forms.Button()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.RaceTimesListBox = New System.Windows.Forms.ListBox()
         Me.RacesTextBox = New System.Windows.Forms.TextBox()
-        Me.AddNewRaceTimesBtn = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -244,6 +244,15 @@ Partial Class EditForm
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Action"
         '
+        'AddNewRaceTimesBtn
+        '
+        Me.AddNewRaceTimesBtn.Location = New System.Drawing.Point(27, 84)
+        Me.AddNewRaceTimesBtn.Name = "AddNewRaceTimesBtn"
+        Me.AddNewRaceTimesBtn.Size = New System.Drawing.Size(154, 34)
+        Me.AddNewRaceTimesBtn.TabIndex = 23
+        Me.AddNewRaceTimesBtn.Text = "Add New Times"
+        Me.AddNewRaceTimesBtn.UseVisualStyleBackColor = True
+        '
         'ErrorProvider1
         '
         Me.ErrorProvider1.ContainerControl = Me
@@ -263,15 +272,6 @@ Partial Class EditForm
         Me.RacesTextBox.ReadOnly = True
         Me.RacesTextBox.Size = New System.Drawing.Size(153, 20)
         Me.RacesTextBox.TabIndex = 34
-        '
-        'AddNewRaceTimesBtn
-        '
-        Me.AddNewRaceTimesBtn.Location = New System.Drawing.Point(27, 84)
-        Me.AddNewRaceTimesBtn.Name = "AddNewRaceTimesBtn"
-        Me.AddNewRaceTimesBtn.Size = New System.Drawing.Size(154, 34)
-        Me.AddNewRaceTimesBtn.TabIndex = 23
-        Me.AddNewRaceTimesBtn.Text = "Add New Times"
-        Me.AddNewRaceTimesBtn.UseVisualStyleBackColor = True
         '
         'EditForm
         '

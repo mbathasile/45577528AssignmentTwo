@@ -30,11 +30,11 @@ Partial Class SearchEvent
         '
         'BackButton
         '
-        Me.BackButton.Location = New System.Drawing.Point(576, 69)
+        Me.BackButton.Location = New System.Drawing.Point(425, 94)
         Me.BackButton.Name = "BackButton"
-        Me.BackButton.Size = New System.Drawing.Size(116, 23)
+        Me.BackButton.Size = New System.Drawing.Size(116, 34)
         Me.BackButton.TabIndex = 7
-        Me.BackButton.Text = "Back"
+        Me.BackButton.Text = "Close"
         Me.BackButton.UseVisualStyleBackColor = True
         '
         'Label1
@@ -57,7 +57,7 @@ Partial Class SearchEvent
         'SearchButton
         '
         Me.SearchButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SearchButton.Location = New System.Drawing.Point(576, 17)
+        Me.SearchButton.Location = New System.Drawing.Point(78, 94)
         Me.SearchButton.Name = "SearchButton"
         Me.SearchButton.Size = New System.Drawing.Size(116, 34)
         Me.SearchButton.TabIndex = 4
@@ -68,7 +68,7 @@ Partial Class SearchEvent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(766, 103)
+        Me.ClientSize = New System.Drawing.Size(670, 183)
         Me.Controls.Add(Me.BackButton)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.EventTitleTextBox)

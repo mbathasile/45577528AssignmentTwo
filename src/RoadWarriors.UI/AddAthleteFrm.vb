@@ -1,6 +1,4 @@
 ﻿Imports RoadWarriors.BusinessLogic
-Imports RoadWarriors.BusinessLogic.Logic
-Imports RoadWarriors.DataLayer
 Imports RoadWarriors.DataLayer.Repository
 
 Public Class AddAthleteFrm
@@ -9,9 +7,7 @@ Public Class AddAthleteFrm
     ReadOnly raceTimes = New Dictionary(Of Integer, String)
 
     Private Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click
-        Me.Hide()
-        Dim manageAthleteFrm = New ManageAthletes()
-        manageAthleteFrm.Show()
+        Close()
     End Sub
 
     Private Sub BDDateTimePicker_ValueChanged(sender As Object, e As EventArgs) Handles BDDateTimePicker.ValueChanged
@@ -39,19 +35,18 @@ Public Class AddAthleteFrm
         End If
 
         For Each t As Object In raceTimes
-            raceTimesResults &= t.ToString().Replace(",",";")
-            raceResultsRepo.Save(membershipNumber &","& raceTimesResults)
+            raceTimesResults &= t.ToString().Replace(",", ";")
+            raceResultsRepo.Save(membershipNumber & "," & raceTimesResults)
         Next
 
         Dim isValid = ValidateValues(membershipNumber, fullName)
 
-        Dim data = String.Format("{0},{1},{2},{3},{4},{5},{6},{7}", membershipNumber, fullName, birthDate, dateJoined, gender, membershipFee,racesCompetedIn, raceTimesResults)
+        Dim data = String.Format("{0},{1},{2},{3},{4},{5},{6},{7}", membershipNumber, fullName, birthDate, dateJoined, gender, membershipFee, racesCompetedIn, raceTimesResults)
 
         If isValid = 0 Then
             athleteRepo.Save(data)
             MsgBox("Data Was Saved Successfully", MsgBoxStyle.Information, "Success")
             Me.Close()
-            ManageAthletes.Show()
         End If
 
     End Sub

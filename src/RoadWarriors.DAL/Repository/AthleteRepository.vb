@@ -1,6 +1,8 @@
 ﻿Imports System.IO
 
-Public Class AthleteRepository
+Namespace Repository
+
+    Public Class AthleteRepository
         'This file will be found in the bin\Debug folder of UI project 
         'RoadWarriors\RoadWarriors.UI\bin\Debug
         Dim filePath As String = "Athlete.txt"
@@ -63,7 +65,6 @@ Public Class AthleteRepository
             Return line
         End Function
         'Delete Athlete
-        'Work in Progress
         Public Sub DeleteAthlete(ByVal athlete As String)
             Dim searchString As String = athlete
             Dim line As String = ""
@@ -78,6 +79,7 @@ Public Class AthleteRepository
                 End If
             End While
             reader.Close()
-            File.AppendAllText(filePath, athlete & vbCrLf)
+            File.WriteAllText(filePath, line & vbCrLf)
         End Sub
     End Class
+End Namespace

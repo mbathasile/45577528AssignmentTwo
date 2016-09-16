@@ -31,12 +31,12 @@ Partial Class SearchForm
         'SearchButton
         '
         Me.SearchButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.SearchButton.Location = New System.Drawing.Point(527, 27)
+        Me.SearchButton.Location = New System.Drawing.Point(29, 127)
         Me.SearchButton.Name = "SearchButton"
         Me.SearchButton.Size = New System.Drawing.Size(116, 34)
         Me.SearchButton.TabIndex = 0
         Me.SearchButton.Text = "Search Athlete"
-        Me.SearchButton.UseVisualStyleBackColor = true
+        Me.SearchButton.UseVisualStyleBackColor = True
         '
         'MembershipNumberTextBox
         '
@@ -47,8 +47,8 @@ Partial Class SearchForm
         '
         'Label1
         '
-        Me.Label1.AutoSize = true
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(26, 43)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(147, 18)
@@ -57,18 +57,18 @@ Partial Class SearchForm
         '
         'BackButton
         '
-        Me.BackButton.Location = New System.Drawing.Point(527, 79)
+        Me.BackButton.Location = New System.Drawing.Point(376, 127)
         Me.BackButton.Name = "BackButton"
-        Me.BackButton.Size = New System.Drawing.Size(116, 23)
+        Me.BackButton.Size = New System.Drawing.Size(116, 34)
         Me.BackButton.TabIndex = 3
-        Me.BackButton.Text = "Back"
-        Me.BackButton.UseVisualStyleBackColor = true
+        Me.BackButton.Text = "Close"
+        Me.BackButton.UseVisualStyleBackColor = True
         '
         'SearchForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(681, 114)
+        Me.ClientSize = New System.Drawing.Size(601, 188)
         Me.Controls.Add(Me.BackButton)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MembershipNumberTextBox)

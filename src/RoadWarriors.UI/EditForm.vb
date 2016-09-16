@@ -1,10 +1,13 @@
 ﻿Imports System.IO
-Imports RoadWarriors.DataLayer
 Imports RoadWarriors.DataLayer.Repository
 
 Public Class EditForm
 
     Dim membershipNumber, fullName, birthDate, dateJoined, membershipFee, racesCompetedIn, raceTimes
+
+    Private Sub AddNewRaceTimesBtn_Click(sender As Object, e As EventArgs) Handles AddNewRaceTimesBtn.Click
+
+    End Sub
     'under construction
     Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
         Dim athleteRepo = New AthleteRepository()
@@ -38,7 +41,6 @@ Public Class EditForm
             'athleteRepo.Save(data)
             MsgBox("Data Was Saved Successfully", MsgBoxStyle.Information, "Success")
             Me.Close()
-            ManageAthletes.Show()
         End If
 
     End Sub
@@ -61,8 +63,6 @@ Public Class EditForm
 
     Private Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click
         Me.Hide()
-        Dim manageAthleteFrm = New ManageAthletes()
-        manageAthleteFrm.Show()
     End Sub
 
     Public Sub GetValues(athlete As String)

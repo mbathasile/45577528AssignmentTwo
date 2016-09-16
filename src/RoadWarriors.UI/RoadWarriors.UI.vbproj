@@ -13,6 +13,22 @@
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>C:\Users\samkelo\Documents\55875564samkelo\setup\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,7 +62,28 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F981E011B00C341C384A5363138413220A1666E7</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>RoadWarriors.UI_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework">
+      <HintPath>..\packages\MetroModernUI.1.3.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\packages\MetroModernUI.1.3.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\packages\MetroModernUI.1.3.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -84,10 +121,10 @@
     <Compile Include="AddEventForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditEventForm+.Designer.vb">
-      <DependentUpon>EditEventForm+.vb</DependentUpon>
+    <Compile Include="EditEventForm.Designer.vb">
+      <DependentUpon>EditEventForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="EditEventForm+.vb">
+    <Compile Include="EditEventForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditForm.Designer.vb">
@@ -96,22 +133,16 @@
     <Compile Include="EditForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="EventRegistration.Designer.vb">
+      <DependentUpon>EventRegistration.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EventRegistration.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainForm.Designer.vb">
       <DependentUpon>MainForm.vb</DependentUpon>
     </Compile>
     <Compile Include="MainForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManageAthletes.Designer.vb">
-      <DependentUpon>ManageAthletes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ManageAthletes.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManageEvents.Designer.vb">
-      <DependentUpon>ManageEvents.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ManageEvents.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -149,20 +180,17 @@
     <EmbeddedResource Include="AddEventForm.resx">
       <DependentUpon>AddEventForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditEventForm+.resx">
-      <DependentUpon>EditEventForm+.vb</DependentUpon>
+    <EmbeddedResource Include="EditEventForm.resx">
+      <DependentUpon>EditEventForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditForm.resx">
       <DependentUpon>EditForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EventRegistration.resx">
+      <DependentUpon>EventRegistration.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManageAthletes.resx">
-      <DependentUpon>ManageAthletes.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManageEvents.resx">
-      <DependentUpon>ManageEvents.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -188,15 +216,28 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="RoadWarriors.UI_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RoadWarriors.BusinessLogic\RoadWarriors.BusinessLogicLayer.vbproj">
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RoadWarriors.BLL\RoadWarriors.BLL.vbproj">
       <Project>{7f656f53-f80f-4e6f-b4d0-3e649ed90c04}</Project>
-      <Name>RoadWarriors.BusinessLogicLayer</Name>
+      <Name>RoadWarriors.BLL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RoadWarriors.DataLayer\RoadWarriors.DataAccessLayer.vbproj">
+    <ProjectReference Include="..\RoadWarriors.DAL\RoadWarriors.DAL.vbproj">
       <Project>{becd6717-eb95-4cdc-aec2-b2d14afc5d46}</Project>
-      <Name>RoadWarriors.DataAccessLayer</Name>
+      <Name>RoadWarriors.DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
