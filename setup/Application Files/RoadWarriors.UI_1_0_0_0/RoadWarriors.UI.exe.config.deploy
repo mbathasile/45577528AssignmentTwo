@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <connectionStrings>
+    <add name="ConnectionString"
+          connectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\Repos\45577528AssignmentTwo\src\RoadWarriors.DAL\45577528_DB.accdb"
+          providerName="System.Data.OleDb" />
+  </connectionStrings>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.2" />
+  </startup>
+</configuration>
