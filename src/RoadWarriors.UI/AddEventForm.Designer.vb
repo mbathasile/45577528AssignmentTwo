@@ -26,7 +26,6 @@ Partial Class AddEventForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.SaveButton = New System.Windows.Forms.Button()
         Me.BackButton = New System.Windows.Forms.Button()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -38,50 +37,37 @@ Partial Class AddEventForm
         Me.EventDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.DistanceTextBox = New System.Windows.Forms.TextBox()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.GroupBox2.SuspendLayout()
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Monotype Corsiva", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(271, 21)
+        Me.Label1.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(287, 19)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(103, 25)
+        Me.Label1.Size = New System.Drawing.Size(116, 24)
         Me.Label1.TabIndex = 23
         Me.Label1.Text = "Add Event"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'SaveButton
         '
-        Me.SaveButton.Location = New System.Drawing.Point(27, 35)
+        Me.SaveButton.Location = New System.Drawing.Point(65, 282)
         Me.SaveButton.Name = "SaveButton"
-        Me.SaveButton.Size = New System.Drawing.Size(154, 34)
+        Me.SaveButton.Size = New System.Drawing.Size(154, 25)
         Me.SaveButton.TabIndex = 21
         Me.SaveButton.Text = "Save"
         Me.SaveButton.UseVisualStyleBackColor = True
         '
         'BackButton
         '
-        Me.BackButton.Location = New System.Drawing.Point(27, 84)
+        Me.BackButton.Location = New System.Drawing.Point(395, 278)
         Me.BackButton.Name = "BackButton"
-        Me.BackButton.Size = New System.Drawing.Size(154, 38)
+        Me.BackButton.Size = New System.Drawing.Size(154, 29)
         Me.BackButton.TabIndex = 22
         Me.BackButton.Text = "Back"
         Me.BackButton.UseVisualStyleBackColor = True
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.BackButton)
-        Me.GroupBox2.Controls.Add(Me.SaveButton)
-        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(480, 106)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(200, 139)
-        Me.GroupBox2.TabIndex = 39
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Action"
         '
         'Label3
         '
@@ -135,35 +121,35 @@ Partial Class AddEventForm
         '
         'TitleTextBox
         '
-        Me.TitleTextBox.Location = New System.Drawing.Point(213, 63)
+        Me.TitleTextBox.Location = New System.Drawing.Point(304, 66)
         Me.TitleTextBox.Name = "TitleTextBox"
-        Me.TitleTextBox.Size = New System.Drawing.Size(451, 20)
+        Me.TitleTextBox.Size = New System.Drawing.Size(245, 20)
         Me.TitleTextBox.TabIndex = 32
         '
         'FeeTextBox
         '
-        Me.FeeTextBox.Location = New System.Drawing.Point(213, 147)
+        Me.FeeTextBox.Location = New System.Drawing.Point(304, 144)
         Me.FeeTextBox.Name = "FeeTextBox"
         Me.FeeTextBox.Size = New System.Drawing.Size(245, 20)
         Me.FeeTextBox.TabIndex = 33
         '
         'LocationTextBox
         '
-        Me.LocationTextBox.Location = New System.Drawing.Point(213, 187)
+        Me.LocationTextBox.Location = New System.Drawing.Point(304, 187)
         Me.LocationTextBox.Name = "LocationTextBox"
         Me.LocationTextBox.Size = New System.Drawing.Size(245, 20)
         Me.LocationTextBox.TabIndex = 34
         '
         'EventDateTimePicker
         '
-        Me.EventDateTimePicker.Location = New System.Drawing.Point(213, 103)
+        Me.EventDateTimePicker.Location = New System.Drawing.Point(304, 103)
         Me.EventDateTimePicker.Name = "EventDateTimePicker"
         Me.EventDateTimePicker.Size = New System.Drawing.Size(245, 20)
         Me.EventDateTimePicker.TabIndex = 36
         '
         'DistanceTextBox
         '
-        Me.DistanceTextBox.Location = New System.Drawing.Point(213, 225)
+        Me.DistanceTextBox.Location = New System.Drawing.Point(304, 225)
         Me.DistanceTextBox.Name = "DistanceTextBox"
         Me.DistanceTextBox.Size = New System.Drawing.Size(245, 20)
         Me.DistanceTextBox.TabIndex = 40
@@ -176,9 +162,10 @@ Partial Class AddEventForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(724, 270)
+        Me.ClientSize = New System.Drawing.Size(724, 328)
+        Me.Controls.Add(Me.BackButton)
         Me.Controls.Add(Me.DistanceTextBox)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.SaveButton)
         Me.Controls.Add(Me.EventDateTimePicker)
         Me.Controls.Add(Me.LocationTextBox)
         Me.Controls.Add(Me.FeeTextBox)
@@ -192,7 +179,6 @@ Partial Class AddEventForm
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "AddEventForm"
         Me.Text = "Add Event Form"
-        Me.GroupBox2.ResumeLayout(False)
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -202,7 +188,6 @@ Partial Class AddEventForm
     Friend WithEvents Label1 As Label
     Friend WithEvents SaveButton As Button
     Friend WithEvents BackButton As Button
-    Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label7 As Label

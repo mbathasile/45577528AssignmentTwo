@@ -1,135 +1,125 @@
-﻿Imports System.IO
+﻿Imports System.Data.OleDb
+Imports System.Globalization
 
 Public Class EventRepository
-    'This file will be found in the bin\Debug folder of UI project 
-    'RoadWarriors\RoadWarriors.UI\bin\Debug
-    Dim filePath As String = "Event.txt"
+
+    ReadOnly _connectionString As String
     Public Sub New()
-        If Not File.Exists(filePath) Then
-            Dim path As FileStream
-            path = File.Create(filePath)
-            path.Close()
-        End If
+        _connectionString = Configuration.ConfigurationManager.ConnectionStrings("ConnectionString").ConnectionString
     End Sub
 
-    ' Write to a Text File
-    Function Save(eventData As String, ByVal title As String) As Integer
-        Dim count = 0
-        Dim lines As List(Of String) = New List(Of String)
-        If File.Exists(filePath) Then
-            If (String.IsNullOrEmpty(eventData)) Then
-                Throw New ArgumentNullException("Cannot save empty event")
-            Else
-                Dim reader As StreamReader
-                reader = File.OpenText(filePath)
-                While reader.Peek <> -1
-                    Dim data = reader.ReadLine()
-                    lines.Add(data)
-                End While
-                reader.Close()
+    Public Function Upadate(athlete As String())
+        Const updateQuery As String = "UPDATE EVENT " &
+                                      "SET Title=@title, EventDate=@date, RegistrationFee=@fee, EventLocation=@location, Distance=@distance " &
+                                      "WHERE Title =@title"
 
-                For Each line In lines
-                    If line.Substring(0, line.IndexOf(",")) <> title Then
-                        count = count + 1
-                        File.AppendAllText(filePath, eventData & vbCrLf)
+        Dim eventDate As Date = Date.ParseExact(athlete(1), "dd-MM-yyyy", CultureInfo.CurrentCulture)
+        Dim insertCount As Integer
+
+        Using dbConnection = New OleDbConnection(_connectionString)
+            Using sqlCmd = New OleDbCommand(updateQuery, dbConnection)
+                dbConnection.Open()
+                sqlCmd.Parameters.AddWithValue("@title", athlete(0))
+                sqlCmd.Parameters.AddWithValue("@date", eventDate)
+                sqlCmd.Parameters.AddWithValue("@fee", athlete(2))
+                sqlCmd.Parameters.AddWithValue("@location", athlete(3))
+                sqlCmd.Parameters.AddWithValue("@distance", athlete(4))
+                insertCount = sqlCmd.ExecuteNonQuery()
+            End Using
+        End Using
+        Return insertCount
+    End Function
+
+    ReadOnly Property AllEvents As DataTable
+        Get
+            Const selectQuery As String = "SELECT * FROM EVENT"
+            Dim dt = New DataTable
+
+            Using dbConnection = New OleDbConnection(_connectionString)
+                Using sqlCmd = New OleDbCommand(selectQuery, dbConnection)
+                    dbConnection.Open()
+                    Dim eventDR As OleDbDataReader = sqlCmd.ExecuteReader
+                    If (eventDR.HasRows) Then
+                        dt.Load(eventDR)
                     End If
-                Next
-
-                If lines.Count = 0 Then
-                    count = count + 1
-                    File.AppendAllText(filePath, eventData & vbCrLf)
-                End If
-            End If
-        End If
-        Return count
-    End Function
-
-    Function GetAllEvents() As List(Of String)
-        Dim line As List(Of String) = New List(Of String)
-        Try
-            Dim reader As StreamReader
-            reader = File.OpenText(filePath)
-            While reader.Peek <> -1
-                Dim data = reader.ReadLine()
-                'compare line to search for member number
-                line.Add(data)
-            End While
-            reader.Close()
-        Catch ex As Exception
-            Throw New Exception("Cannot open file!!!")
-        End Try
-        Return line
-    End Function
+                End Using
+            End Using
+            Return dt
+        End Get
+    End Property
 
     ' Read From a Text File
-    Function GetEventeBy(title As String) As String
-        Dim line As String = ""
-        Try
-            Dim reader As StreamReader
-            reader = File.OpenText(filePath)
-            While reader.Peek <> -1
-                line = reader.ReadLine()
-                If line.Contains(title) Then
-                    Return line
+    Function GetEventBy(title As String) As DataTable
+        Const selectQuery As String = "SELECT * FROM EVENT " &
+                                  "WHERE Title =@title"
+        Dim athleteDt = New DataTable
+
+        Using dbConnection = New OleDbConnection(_connectionString)
+            Using sqlCmd = New OleDbCommand(selectQuery, dbConnection)
+                dbConnection.Open()
+                sqlCmd.Parameters.Add("@title", OleDbType.VarChar).Value = title
+                Dim athleteDr As OleDbDataReader = sqlCmd.ExecuteReader()
+                If (athleteDr.HasRows) Then
+                    athleteDt.Load(athleteDr)
                 End If
-            End While
-            reader.Close()
-        Catch ex As Exception
-            Throw New Exception("Cannot open file!!!")
-        End Try
-        Return line
+            End Using
+        End Using
+        Return athleteDt
     End Function
-    Function DeleteEvent(ByVal eventData As List(Of String), ByVal title As String) As Boolean
+
+    Function GetAllEvents() As DataTable
+        Const selectQuery As String = "SELECT * FROM EVENT"
+        Dim dt = New DataTable
+
+        Using dbConnection = New OleDbConnection(_connectionString)
+            Using sqlCmd = New OleDbCommand(selectQuery, dbConnection)
+                dbConnection.Open()
+                Dim eventDr As OleDbDataReader = sqlCmd.ExecuteReader
+                If (eventDr.HasRows) Then
+                    dt.Load(eventDr)
+                End If
+            End Using
+        End Using
+
+        Return dt
+    End Function
+
+    Function DeleteEvent(ByVal title As String) As Boolean
         Dim deleted = False
-        Dim count = 0
-        Dim lines As List(Of String) = New List(Of String)
-
-        If File.Exists(filePath) Then
-            If (eventData.Count = 0) Then
-                Throw New ArgumentNullException("Cannot delete empty event")
-            Else
-                lines = eventData
-                count = lines.Count
-                For Each line In lines
-                    If line.Substring(0, line.IndexOf(",")) <> title Then
-                        count = count - 1
-                        File.AppendAllText(filePath, line & vbCrLf)
-                    ElseIf lines.Count = 1 Then
-                        count = count - 1
-                        File.Delete(filePath)
-                    End If
-                Next
-            End If
-        End If
-
-        If count = lines.Count - 1 Then
+        Const selectQuery As String = "DELETE * FROM EVENT " &
+                                      "WHERE Title =@title"
+        Dim insertCount As Integer
+        Using dbConnection = New OleDbConnection(_connectionString)
+            Using sqlCmd = New OleDbCommand(selectQuery, dbConnection)
+                dbConnection.Open()
+                sqlCmd.Parameters.AddWithValue("@title", title)
+                insertCount = sqlCmd.ExecuteNonQuery()
+            End Using
+        End Using
+        If insertCount > 0 Then
             deleted = True
         End If
-
         Return deleted
     End Function
 
+    Public Function Save(eventData() As String, title As String) As Object
+        Const insertQuery As String = "INSERT INTO EVENT (Title, EventDate, RegistrationFee, EventLocation, Distance)" &
+                                       "VALUES(@Title, @EventDate, @RegistrationFee, @EventLocation, @Distance)"
 
-    Function FindEvents(ByVal eventData As String)
-        Dim lines As List(Of String) = New List(Of String)
+        Dim eventDate As Date = Date.ParseExact(eventData(1), "dd-MM-yyyy", CultureInfo.CurrentCulture)
+        Dim insertCount As Integer
 
-        If File.Exists(filePath) Then
-            If (String.IsNullOrEmpty(eventData)) Then
-                Throw New ArgumentNullException("Cannot delete empty event")
-            Else
-                Dim reader As StreamReader
-                reader = File.OpenText(filePath)
-                While reader.Peek <> -1
-                    Dim data = reader.ReadLine()
-                    lines.Add(data)
-                End While
-                reader.Dispose()
-                reader.Close()
-
-            End If
-        End If
-        Return lines
-
+        Using dbConnection = New OleDbConnection(_connectionString)
+            Using sqlCmd = New OleDbCommand(insertQuery, dbConnection)
+                dbConnection.Open()
+                sqlCmd.Parameters.Add("@Title", OleDbType.VarChar).Value = eventData(0)
+                sqlCmd.Parameters.Add("@EventDate", OleDbType.VarChar).Value = eventDate
+                sqlCmd.Parameters.Add("@RegistrationFee", OleDbType.Currency).Value = eventData(2)
+                sqlCmd.Parameters.Add("@EventLocation", OleDbType.VarChar).Value = eventData(3)
+                sqlCmd.Parameters.Add("@Distance", OleDbType.Integer).Value = eventData(4)
+                insertCount = sqlCmd.ExecuteNonQuery()
+            End Using
+        End Using
+        Return insertCount
     End Function
-
 End Class

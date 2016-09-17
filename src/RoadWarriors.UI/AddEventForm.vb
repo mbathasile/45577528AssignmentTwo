@@ -17,12 +17,14 @@ Public Class AddEventForm
         Dim isValid = ValidateValues(title, regFee, location, distance)
 
         If isValid = 0 Then
-            Dim data = String.Format("{0},{1},{2},{3},{4}", title, eventDate, regFee, location, distance)
-            Dim saved = eventRepo.Save(data, title)
+            Dim eventData As String() = {title, eventDate, regFee, location, distance}
+
+            Dim saved = eventRepo.Save(eventData, title)
             If saved > 0 Then
                 MsgBox("Data Was Saved Successfully", MsgBoxStyle.Information, "Success")
-                Me.Close()
-                MsgBox("Event name already exist", MsgBoxStyle.Exclamation, "Error")
+                Close()
+            Else
+                MsgBox("Event event couldn't be saved", MsgBoxStyle.Exclamation, "Error")
             End If
         End If
 

@@ -1,5 +1,6 @@
 ﻿Imports RoadWarriors.BusinessLogic
 Imports RoadWarriors.BusinessLogic.Logic
+Imports RoadWarriors.DataLayer
 Imports RoadWarriors.DataLayer.Repository
 
 Public Class SearchForm
@@ -10,15 +11,15 @@ Public Class SearchForm
         Dim isValidMember = False
 
         If MembershipNumberTextBox.Text <> "" Then
-        isValidMember = membershipValidator.MembershipNumberValidator(MembershipNumberTextBox.Text)
-       End If
+            isValidMember = membershipValidator.MembershipNumberValidator(MembershipNumberTextBox.Text)
+        End If
 
         If isValidMember Then
             Me.Hide()
             Dim editAthleteFrm = New EditForm()
             editAthleteFrm.GetValues(athleteRepo.GetAthleteBy(MembershipNumberTextBox.Text))
             editAthleteFrm.Show()
-            Else
+        Else
             MsgBox("Member number is not valid please enter a valid number", MsgBoxStyle.Exclamation, "Error")
         End If
 

@@ -51,9 +51,10 @@ Public Class MainForm
 
     Private Sub SearchEditToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SearchEditToolStripMenuItem.Click
         MainPanel.Controls.Clear()
-        If serchForm IsNot Nothing Then
-            manageFrm.close()
+        If Me.ActiveMdiChild IsNot Nothing Then
+            Me.ActiveMdiChild.Close()
         End If
+
         serchForm = New SearchForm()
         FormSetup(serchForm)
     End Sub

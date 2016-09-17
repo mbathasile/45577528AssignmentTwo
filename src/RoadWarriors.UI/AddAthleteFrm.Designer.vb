@@ -33,39 +33,33 @@ Partial Class AddAthleteFrm
         Me.MaleRadioBtn = New System.Windows.Forms.RadioButton()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.FullNameTextBox = New System.Windows.Forms.TextBox()
         Me.FeeTextBox = New System.Windows.Forms.TextBox()
-        Me.RacesTextBox = New System.Windows.Forms.TextBox()
-        Me.RaceTimesListBox = New System.Windows.Forms.ListBox()
         Me.BDDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.DJoinedDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.MembershipNumberLabel = New System.Windows.Forms.Label()
         Me.SaveButton = New System.Windows.Forms.Button()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.BackButton = New System.Windows.Forms.Button()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
-        Me.GroupBox1.SuspendLayout
-        Me.GroupBox2.SuspendLayout
-        CType(Me.ErrorProvider1,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.SuspendLayout
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
         '
         'Label1
         '
-        Me.Label1.AutoSize = true
-        Me.Label1.Font = New System.Drawing.Font("Monotype Corsiva", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic),System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Label1.Location = New System.Drawing.Point(219, 9)
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Arial", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(264, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(114, 25)
+        Me.Label1.Size = New System.Drawing.Size(127, 24)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Add Athlete"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label2
         '
-        Me.Label2.AutoSize = true
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(27, 51)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(147, 18)
@@ -74,8 +68,8 @@ Partial Class AddAthleteFrm
         '
         'Label3
         '
-        Me.Label3.AutoSize = true
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(27, 83)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(75, 18)
@@ -84,8 +78,8 @@ Partial Class AddAthleteFrm
         '
         'Label4
         '
-        Me.Label4.AutoSize = true
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(27, 117)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(73, 18)
@@ -94,8 +88,8 @@ Partial Class AddAthleteFrm
         '
         'Label5
         '
-        Me.Label5.AutoSize = true
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(27, 152)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(0, 18)
@@ -105,7 +99,7 @@ Partial Class AddAthleteFrm
         '
         Me.GroupBox1.Controls.Add(Me.FemaleRadioBtn)
         Me.GroupBox1.Controls.Add(Me.MaleRadioBtn)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(458, 83)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(203, 58)
@@ -155,26 +149,6 @@ Partial Class AddAthleteFrm
         Me.Label7.TabIndex = 10
         Me.Label7.Text = "Membership Fee" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Amount"
         '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(27, 296)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(139, 18)
-        Me.Label8.TabIndex = 11
-        Me.Label8.Text = "Races Competed In"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(27, 329)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(88, 18)
-        Me.Label9.TabIndex = 12
-        Me.Label9.Text = "Race Times"
-        '
         'FullNameTextBox
         '
         Me.FullNameTextBox.Location = New System.Drawing.Point(180, 83)
@@ -188,21 +162,6 @@ Partial Class AddAthleteFrm
         Me.FeeTextBox.Name = "FeeTextBox"
         Me.FeeTextBox.Size = New System.Drawing.Size(245, 20)
         Me.FeeTextBox.TabIndex = 14
-        '
-        'RacesTextBox
-        '
-        Me.RacesTextBox.Location = New System.Drawing.Point(180, 297)
-        Me.RacesTextBox.Name = "RacesTextBox"
-        Me.RacesTextBox.Size = New System.Drawing.Size(245, 20)
-        Me.RacesTextBox.TabIndex = 15
-        '
-        'RaceTimesListBox
-        '
-        Me.RaceTimesListBox.FormattingEnabled = True
-        Me.RaceTimesListBox.Location = New System.Drawing.Point(180, 329)
-        Me.RaceTimesListBox.Name = "RaceTimesListBox"
-        Me.RaceTimesListBox.Size = New System.Drawing.Size(245, 95)
-        Me.RaceTimesListBox.TabIndex = 16
         '
         'BDDateTimePicker
         '
@@ -229,29 +188,17 @@ Partial Class AddAthleteFrm
         '
         'SaveButton
         '
-        Me.SaveButton.Location = New System.Drawing.Point(27, 35)
+        Me.SaveButton.Location = New System.Drawing.Point(30, 400)
         Me.SaveButton.Name = "SaveButton"
         Me.SaveButton.Size = New System.Drawing.Size(154, 34)
         Me.SaveButton.TabIndex = 21
         Me.SaveButton.Text = "Save"
         Me.SaveButton.UseVisualStyleBackColor = True
         '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.BackButton)
-        Me.GroupBox2.Controls.Add(Me.SaveButton)
-        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(431, 262)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(200, 139)
-        Me.GroupBox2.TabIndex = 22
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Action"
-        '
         'BackButton
         '
         Me.BackButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.BackButton.Location = New System.Drawing.Point(27, 84)
+        Me.BackButton.Location = New System.Drawing.Point(490, 396)
         Me.BackButton.Name = "BackButton"
         Me.BackButton.Size = New System.Drawing.Size(154, 38)
         Me.BackButton.TabIndex = 22
@@ -268,16 +215,13 @@ Partial Class AddAthleteFrm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.BackButton
         Me.ClientSize = New System.Drawing.Size(688, 503)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.BackButton)
+        Me.Controls.Add(Me.SaveButton)
         Me.Controls.Add(Me.MembershipNumberLabel)
         Me.Controls.Add(Me.DJoinedDateTimePicker)
         Me.Controls.Add(Me.BDDateTimePicker)
-        Me.Controls.Add(Me.RaceTimesListBox)
-        Me.Controls.Add(Me.RacesTextBox)
         Me.Controls.Add(Me.FeeTextBox)
         Me.Controls.Add(Me.FullNameTextBox)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.GroupBox1)
@@ -288,12 +232,11 @@ Partial Class AddAthleteFrm
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "AddAthleteFrm"
-        Me.ShowIcon = false
+        Me.ShowIcon = False
         Me.Text = "Add Athlete"
-        Me.GroupBox1.ResumeLayout(false)
-        Me.GroupBox1.PerformLayout
-        Me.GroupBox2.ResumeLayout(false)
-        CType(Me.ErrorProvider1,System.ComponentModel.ISupportInitialize).EndInit
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(false)
         Me.PerformLayout
 
@@ -309,17 +252,12 @@ End Sub
     Friend WithEvents FemaleRadioBtn As RadioButton
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
     Friend WithEvents FullNameTextBox As TextBox
     Friend WithEvents FeeTextBox As TextBox
-    Friend WithEvents RacesTextBox As TextBox
-    Friend WithEvents RaceTimesListBox As ListBox
     Friend WithEvents BDDateTimePicker As DateTimePicker
     Friend WithEvents DJoinedDateTimePicker As DateTimePicker
     Friend WithEvents MembershipNumberLabel As Label
     Friend WithEvents SaveButton As Button
-    Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents BackButton As Button
     Friend WithEvents ErrorProvider1 As ErrorProvider
 End Class

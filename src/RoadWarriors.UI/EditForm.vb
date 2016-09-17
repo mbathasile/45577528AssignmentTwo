@@ -1,9 +1,10 @@
 ﻿Imports System.IO
+Imports RoadWarriors.DataLayer
 Imports RoadWarriors.DataLayer.Repository
 
 Public Class EditForm
 
-    Dim membershipNumber, fullName, birthDate, dateJoined, membershipFee, racesCompetedIn, raceTimes
+    Dim membershipNumber, fullName, birthDate, dateJoined, membershipFee, racesCompetedIn, raceTimes, athleteId
 
     Private Sub AddNewRaceTimesBtn_Click(sender As Object, e As EventArgs) Handles AddNewRaceTimesBtn.Click
 
@@ -18,7 +19,7 @@ Public Class EditForm
         birthDate = BDDateTimePicker.Value.ToString("dd/MM/yyyy")
         dateJoined = DJoinedDateTimePicker.Value.ToString("dd/MM/yyyy")
         membershipFee = FeeTextBox.Text
-        
+
         Dim gender As String
         If MaleRadioBtn.Checked Then
             gender = "Male"
@@ -28,19 +29,16 @@ Public Class EditForm
 
         Dim isValid = ValidateValues(membershipNumber, fullName)
 
-
-        Dim athlete = athleteRepo.GetAthleteBy(membershipNumber)
-        athleteRepo.DeleteAthlete(athlete)
-
-
         If isValid = 0 Then
 
-            Dim data = String.Format("{0},{1},{2},{3},{4},{5},{6},{7}", membershipNumber, fullName, birthDate, dateJoined, gender, membershipFee, racesCompetedIn, raceTimes)
-
-
-            'athleteRepo.Save(data)
+            Dim athleteData() As String = {membershipNumber, fullName, birthDate, dateJoined, gender, membershipFee}
+            If (athleteRepo.Save(athleteData) > 0) Then
+                MsgBox("Data Was Saved Successfully", MsgBoxStyle.Information, "Success")
+            Else
+                MsgBox("Athlete not saved!", MsgBoxStyle.Exclamation, "Error")
+            End If
+            Close()
             MsgBox("Data Was Saved Successfully", MsgBoxStyle.Information, "Success")
-            Me.Close()
         End If
 
     End Sub
@@ -65,23 +63,22 @@ Public Class EditForm
         Me.Hide()
     End Sub
 
-    Public Sub GetValues(athlete As String)
-        Dim athleteData = athlete.Split(",")
+    Public Sub GetValues(athleteDt As DataTable)
+        Dim athleteData = From athlete In athleteDt.AsEnumerable().ToList()
 
-        membershipNumber = athleteData(0)
-        fullName = athleteData(1)
-        birthDate = (athleteData(2))
-        dateJoined = (athleteData(3))
+        athleteId = athleteData.ElementAt(0).ItemArray(0)
+        membershipNumber = athleteData.ElementAt(0).ItemArray(1)
+        fullName = athleteData.ElementAt(0).ItemArray(2)
+        birthDate = athleteData.ElementAt(0).ItemArray(3).ToShortDateString()
+        dateJoined = athleteData.ElementAt(0).ItemArray(5).ToShortDateString()
 
-        If athleteData(4) = "Male" Then
+        If athleteData.ElementAt(0).ItemArray(4) = "Male" Then
             MaleRadioBtn.Checked = True
         Else
             FemaleRadioBtn.Checked = True
         End If
 
-        membershipFee = athleteData(5)
-        racesCompetedIn = athleteData(6)
-        raceTimes = athleteData(7).ToString()
+        membershipFee = athleteData.ElementAt(0).ItemArray(6)
     End Sub
 
     Private Sub EditForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load

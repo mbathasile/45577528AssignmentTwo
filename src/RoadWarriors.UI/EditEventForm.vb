@@ -1,7 +1,7 @@
 ﻿Imports RoadWarriors.DataLayer
 
 Public Class EditEventForm_
-    Dim eventName, eventDate, ragistrationFee, location, distance
+    Dim _eventTitle, _eventDate, _ragistrationFee, _location, _distance
 
     Private Sub SaveButton_Click(sender As Object, e As EventArgs) Handles SaveButton.Click
 
@@ -9,11 +9,7 @@ Public Class EditEventForm_
 
     Private Sub DeleteButton_Click(sender As Object, e As EventArgs) Handles DeleteButton.Click
         Dim eventRepo = New EventRepository()
-        Dim eventData = String.Format("{0},{1},{2},{3},{4}", TitleTextBox.Text, EventDateTimePicker.Value, FeeTextBox.Text, LocationTextBox.Text, DistanceTextBox.Text)
-
-        Dim list As List(Of String) = eventRepo.FindEvents(eventData)
-
-        Dim deleted = eventRepo.DeleteEvent(list, TitleTextBox.Text)
+        Dim deleted = eventRepo.DeleteEvent(TitleTextBox.Text)
 
         If deleted Then
             MsgBox("Data Was Deleted Successfully", MsgBoxStyle.Information, "Success")
@@ -28,19 +24,19 @@ Public Class EditEventForm_
     End Sub
 
     Private Sub EditEventForm__Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        TitleTextBox.Text = eventName
-        EventDateTimePicker.Value = DateTime.Parse(eventDate)
-        FeeTextBox.Text = ragistrationFee
-        LocationTextBox.Text = location
-        DistanceTextBox.Text = distance
+        TitleTextBox.Text = _eventTitle
+        EventDateTimePicker.Value = DateTime.Parse(_eventDate)
+        FeeTextBox.Text = _ragistrationFee
+        LocationTextBox.Text = _location
+        DistanceTextBox.Text = _distance
     End Sub
 
-    Friend Sub GetValues(eventValues As String)
-        Dim eventData = eventValues.Split(",")
-        eventName = eventData(0)
-        eventDate = eventData(1)
-        ragistrationFee = eventData(2)
-        location = eventData(3)
-        distance = eventData(4)
+    Friend Sub GetValues(eventDt As DataTable)
+        Dim eventData = From eventV In eventDt.AsEnumerable().ToArray()
+        _eventTitle = eventData.ElementAt(0).ItemArray(1)
+        _eventDate = eventData.ElementAt(0).ItemArray(2)
+        _ragistrationFee = eventData.ElementAt(0).ItemArray(3)
+        _location = eventData.ElementAt(0).ItemArray(4)
+        _distance = eventData.ElementAt(0).ItemArray(5)
     End Sub
 End Class

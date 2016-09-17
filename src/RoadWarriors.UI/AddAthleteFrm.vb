@@ -23,8 +23,8 @@ Public Class AddAthleteFrm
 
         Dim membershipNumber = MembershipNumberLabel.Text
         Dim fullName = FullNameTextBox.Text
-        Dim birthDate = BDDateTimePicker.Value.ToString("dd/MM/yyyy")
-        Dim dateJoined = DJoinedDateTimePicker.Value.ToString("dd/MM/yyyy")
+        Dim birthDate = BDDateTimePicker.Value.ToString("dd-MM-yyyy")
+        Dim dateJoined = DJoinedDateTimePicker.Value.ToString("dd-MM-yyyy")
         Dim membershipFee = FeeTextBox.Text
         Dim raceTimesResults = ""
         Dim gender As String
@@ -40,12 +40,14 @@ Public Class AddAthleteFrm
         Next
 
         Dim isValid = ValidateValues(membershipNumber, fullName)
-
-        Dim data = String.Format("{0},{1},{2},{3},{4},{5},{6},{7}", membershipNumber, fullName, birthDate, dateJoined, gender, membershipFee, racesCompetedIn, raceTimesResults)
+        Dim athleteData() As String = {membershipNumber, fullName, birthDate, dateJoined, gender, membershipFee, racesCompetedIn, raceTimesResults}
 
         If isValid = 0 Then
-            athleteRepo.Save(data)
-            MsgBox("Data Was Saved Successfully", MsgBoxStyle.Information, "Success")
+            If (athleteRepo.Save(athleteData) > 0) Then
+                MsgBox("Data Was Saved Successfully", MsgBoxStyle.Information, "Success")
+            Else
+                MsgBox("Athlete not saved!", MsgBoxStyle.Exclamation, "Error")
+            End If
             Me.Close()
         End If
 
@@ -67,22 +69,8 @@ Public Class AddAthleteFrm
 
     End Function
 
-    Private Sub RacesTextBox_TextChanged(sender As Object, e As EventArgs) Handles RacesTextBox.TextChanged
-        If RacesTextBox.Text = "" Then
-            racesCompetedIn = 0
-        Else
-            racesCompetedIn = CInt(RacesTextBox.Text)
-        End If
+    Private Sub RacesTextBox_TextChanged(sender As Object, e As EventArgs)
 
-        If racesCompetedIn > 0 Then
-            For i = 1 To racesCompetedIn
-                Dim race = InputBox("Enter race " & i, "Race Times")
-                raceTimes.Add(i, race)
-                RaceTimesListBox.Items.Add("Race " & i & " Time : " & race)
-            Next i
-        Else
-            RaceTimesListBox.Items.Add("No races competed")
-        End If
     End Sub
 
 End Class

@@ -13,16 +13,14 @@ Public Class EventRegistration
         Dim athleteRepo = New AthleteRepository()
         Dim eventRepo = New EventRepository()
 
-        Dim events = eventRepo.GetAllEvents()
-        Dim athletes = athleteRepo.GetAllAthletes()
+        Dim eventsDt = eventRepo.AllEvents()
+        Dim athletesDt = athleteRepo.GetAllAthletes()
 
-        For Each eventDetail In events
-            EventTileComboBox.Items.Add(eventDetail.Substring(0, eventDetail.IndexOf(",")))
-        Next
+        Dim items = eventsDt.AsEnumerable().Select(Function(d) DirectCast(d(1).ToString(), Object)).ToArray()
+        EventTileComboBox.Items.AddRange(items)
 
-        For Each athlete In athletes
-            AthletesComboBox.Items.Add(athlete.Substring(0, athlete.IndexOf(",")))
-        Next
+        Dim athletes = athletesDt.AsEnumerable().Select(Function(d) DirectCast(d(1).ToString(), Object)).ToArray()
+        AthletesComboBox.Items.AddRange(athletes)
 
     End Sub
 
